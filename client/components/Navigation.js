@@ -1,16 +1,15 @@
 import React from 'react';
-
+import { Link } from 'react-router'
+ 
 export default () => {
 	return (
-		<nav className="navbar navbar-light bg-faded">
-	  		<a className="navbar-brand" href="/">BoardRoom</a>
-		  	<ul className="nav navbar-nav">
-		  		<div className="form-inline pull-xs-right">
-		  			<li className="nav-item">
-			    		<a href="/signup"><button className="btn btn-outline-success" type="submit">Sign Up</button></a>
-			    	</li>
-		  		</div>	
+		<nav className="navbar navbar-default">
+	  		<Link className="navbar-brand" to="/" >BoardRoom</Link>
+	  		<div className="collapse navbar-collapse">
+		  	<ul className="nav navbar-nav navbar-right">
+		  		<li><Link to="/signup" >Sign up</Link></li>
 		  	</ul>
+		  	</div>
 		</nav>
 	);
 }
